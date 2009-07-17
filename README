@@ -32,6 +32,12 @@
 	可以在派生类中传递套接字参数给基类的构造函数，具体可以看看 test_main.cpp 这个 既是测试
 	用的又是 Demo .
 	
+	netserver 必须重载 newWorker() 和 deleteWorker();
+	用来创建 自己派生下来的 worker 类。 因为本类库内部并没有派生的 worker 类的实现，所以内部
+	无法创建，必须由用户自己定义函数创建
+	
+	首先调用 
+	
 	
 	
 		

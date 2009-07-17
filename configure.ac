@@ -25,14 +25,19 @@ AC_CHECK_HEADERS(linux/futex.h sched.h fcntl.h sys/ioctl.h sys/mman.h)
 
 # Checks for library functions.
 
-
-
-
 AC_CONFIG_FILES([
 				 Makefile
 				 source/Makefile
 				 include/Makefile
 			   ])
-AC_ENABLE( test, [   AC_CONFIG_FILES(tester/Makefile)  ] )
+			   
+HAVE_TEST=no
+			   
+AC_SUBST(HAVE_TEST)
+			   
+AC_ENABLE( test, [
+				HAVE_TEST=yes;			   
+			   AC_CONFIG_FILES(tester/Makefile) 
+			     ] )
 
 AC_OUTPUT
