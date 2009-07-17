@@ -69,7 +69,7 @@ protected:
 
 int main()
 {
-	mynetserver p(3389);
+	mynetserver p(1280);
 	p.start_epoll_threads(1);
 	p.start_accept();
 
